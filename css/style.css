@@ -2,39 +2,32 @@
 body {
   margin: 0;
   font: normal 85% Arial, Helvetica, sans-serif;
-
 }
 
 .black-white {
-  text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+  /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000; */
   color: white;
   font-weight: bold;
-
 }
 
 .white-black h3 {
-  text-shadow:
-    -1px -1px 0 #FFF,
-    1px -1px 0 #FFF,
-    -1px 1px 0 #FFF,
-    1px 1px 0 #FFF;
+  text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+    1px 1px 0 #fff;
   color: #000;
   font-weight: bolder;
-
 }
 
 .justblack {
-  color: #424242;
+  color: black;
+  /* color: #424242; */
   font-weight: 600;
   font-style: oblique;
 }
 
 .justblack h3 {
-  color: #424242;
+  color: black;
+  /* color: #424242; */
   font-weight: 600;
   font-style: oblique;
 }
@@ -61,7 +54,6 @@ canvas {
 .svg-icons {
   height: 40px;
   width: 40px;
-
 }
 
 .content-center a {
@@ -154,13 +146,12 @@ ul {
   padding-top: 30px;
   max-width: 500px;
   height: 100%;
-  /* position: absolute;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  margin-left: auto;
-  margin-right: auto;
-  left: 50;
-  right: 50; */
+  display: block;
+  padding: 0px 10px;
+  /* display: block; */
+  background: rgba(17, 72, 117, 0.2);
+  border-image: linear-gradient(212deg, #833ad9, #137691, #1165a4) 1 1;
+  border-radius: 4px;
 }
 
 .panel {
@@ -190,10 +181,9 @@ ul {
   }
 }
 
-@media screen and (min-width: 551px) and (max-width:880px) {
+@media screen and (min-width: 551px) and (max-width: 880px) {
   #p-wrapper {
     background-image: url("./../img/alam-sm.jpg");
-
   }
 
   .extraspace {
@@ -226,8 +216,8 @@ span:focus {
 }
 
 .wrap {
-  background: #ECF0F1;
-  color: #607D8B;
+  background: #ecf0f1;
+  color: #607d8b;
   height: 100%;
   overflow: auto;
   padding: 1em 2.5em;
@@ -255,14 +245,14 @@ h1 {
 pre {
   background: #fff;
   display: inline-block;
-  font-size: .55em;
+  font-size: 0.55em;
   margin-top: 2em;
   padding: 1em;
 }
 
 @media (min-width: 360px) {
   pre {
-    font-size: .7em;
+    font-size: 0.7em;
   }
 }
 
@@ -272,13 +262,11 @@ pre {
   }
 }
 
-
 /*== start of code for tooltips ==*/
 .tool {
   cursor: help;
   position: relative;
 }
-
 
 /*== common styles for both parts of tool tip ==*/
 .tool::before,
@@ -298,50 +286,49 @@ pre {
   z-index: 100;
 }
 
-
 /*== pointer tip ==*/
 .tool::before {
   border-style: solid;
   border-width: 1em 0.75em 0 0.75em;
-  border-color: #3E474F transparent transparent transparent;
+  border-color: #3e474f transparent transparent transparent;
   opacity: 0.9;
 
   bottom: 100%;
   content: "";
   margin-left: -0.5em;
-  transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26), opacity .65s .5s;
-  transform: scale(.6) translateY(-90%);
+  transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26),
+    opacity 0.65s 0.5s;
+  transform: scale(0.6) translateY(-90%);
 }
 
 .tool:hover::before,
 .tool:focus::before {
-  transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26) .2s;
+  transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26) 0.2s;
 }
-
 
 /*== speech bubble ==*/
 .tool::after {
-  background: #3E474F;
+  background: #3e474f;
   opacity: 0.9;
-  border-radius: .25em;
+  border-radius: 0.25em;
   bottom: 180%;
-  color: #EDEFF0;
+  color: #edeff0;
   content: attr(data-tip);
   margin-left: -8.75em;
   padding: 1em;
-  transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26) .2s;
-  transform: scale(.6) translateY(50%);
+  transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26) 0.2s;
+  transform: scale(0.6) translateY(50%);
   width: 17.5em;
 }
 
 .tool:hover::after,
 .tool:focus::after {
-  transition: all .65s cubic-bezier(.84, -0.18, .31, 1.26);
+  transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26);
 }
 
 @media (max-width: 760px) {
   .tool::after {
-    font-size: .75em;
+    font-size: 0.75em;
     margin-left: -5em;
     width: 10em;
   }
