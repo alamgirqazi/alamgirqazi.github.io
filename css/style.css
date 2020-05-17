@@ -22,14 +22,14 @@ body {
   color: black;
   /* color: #424242; */
   font-weight: 600;
-  font-style: oblique;
+  /* font-style: oblique; */
 }
 
 .justblack h3 {
   color: black;
   /* color: #424242; */
   font-weight: 600;
-  font-style: oblique;
+  /* font-style: oblique; */
 }
 
 canvas {
@@ -118,8 +118,13 @@ body {
   /* line-height: 2.9; */
   line-height: 200%;
   padding-left: 0;
-  font-size: 1.6em;
+  font-size: 2.1em;
   font-weight: bolder;
+}
+
+.lg-text {
+  font-size: 3.1em;
+
 }
 
 .description {
@@ -166,13 +171,27 @@ ul {
   /* Safari and Chrome */
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   #p-wrapper {
     background-image: url("./../img/alam-xsm.jpg");
   }
 
-  .extraspace {
+  /* .extraspace {
     display: none;
+  } */
+
+  .about-me {
+
+    font-size: 1.5em;
+  }
+
+  .lg-text {
+
+    font-size: 2.1em;
+  }
+
+  .content-center h3 {
+    font-size: 26px;
   }
 
   .particles-js-canvas-el {
@@ -186,14 +205,41 @@ ul {
     background-image: url("./../img/alam-sm.jpg");
   }
 
-  .extraspace {
+  /* .extraspace {
     display: block;
+  } */
+
+
+
+  .about-me {
+
+    font-size: 1.5em;
   }
+
+  .lg-text {
+
+    font-size: 2.1em;
+  }
+
 }
 
 @media screen and (min-width: 881px) {
   #p-wrapper {
     /* display: block !important; */
+  }
+
+  .about-me {
+    list-style: none;
+    /* line-height: 2.9; */
+    line-height: 200%;
+    padding-left: 0;
+    font-size: 2.1em;
+    font-weight: bolder;
+  }
+
+  .lg-text {
+    font-size: 3.1em;
+
   }
 }
 
@@ -235,6 +281,8 @@ h1 {
   margin: 0.5em 0 2.5em;
   text-shadow: 1px 1px 1px #fefefe;
 }
+
+
 
 @media (min-width: 1075px) {
   h1 {
